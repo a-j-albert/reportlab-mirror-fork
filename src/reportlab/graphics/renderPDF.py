@@ -238,6 +238,7 @@ class _PDFRenderer(Renderer):
                         value = value[1]
                     else:
                         phase = 0
+                    value = [abs(item) for item in value]
                     self._canvas.setDash(value,phase)
                 else:
                     self._canvas.setDash()
